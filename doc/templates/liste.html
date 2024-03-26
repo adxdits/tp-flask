@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des jeux vidéos</title>
+</head>
+<body>
+    <h1>Liste des jeux vidéos</h1>
+    <table border="1">
+        <tr>
+            <th>Nom</th>
+            <th>Plateforme</th>
+            <th>Prix</th>
+            <th>Description</th>
+        </tr>
+        {% for jeu in jeux_videos %}
+        <tr>
+            <td>{{ jeu.nom }}</td>
+            <td>{{ jeu.plateforme }}</td>
+            <td>{{ jeu.prix }}</td>
+            <td>{{ jeu.description }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">Retour au menu</a>
+    <br>
+    <a href="/saisie.html">Formulaire de saisie</a>
+</body>
+</html>
